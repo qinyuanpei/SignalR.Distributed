@@ -37,6 +37,7 @@ namespace SignalR.Distributed.Hubs
                 {
                     EventTime = DateTime.Now,
                     EventType = "系统消息",
+                    UserID = userId,
                     Content = $"{DateTime.Now},用户{userId}加入聊天室{roomId}"
                 };
                 return Clients.Group(roomId).SendAsync("UserJoined", message);
@@ -47,6 +48,7 @@ namespace SignalR.Distributed.Hubs
                 {
                     EventTime = DateTime.Now,
                     EventType = "系统消息",
+                    UserID = userId,
                     Content = $"{DateTime.Now},用户{userId}加入聊天"
                 };
                 return Clients.All.SendAsync("UserJoined", message);

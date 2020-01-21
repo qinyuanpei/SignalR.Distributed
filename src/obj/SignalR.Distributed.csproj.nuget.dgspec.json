@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "(, )"
+            },
             "SignalR": {
               "target": "Package",
               "version": "[0.6.1, )"
