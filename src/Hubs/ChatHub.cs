@@ -35,19 +35,21 @@ namespace SignalR.Distributed.Hubs
             {
                 var message = new
                 {
+                    EventTime = DateTime.Now,
                     EventType = "系统消息",
                     Content = $"{DateTime.Now},用户{userId}加入聊天室{roomId}"
                 };
-                return Clients.Group(roomId).SendAsync("Broadcast", message);
+                return Clients.Group(roomId).SendAsync("UserJoined", message);
             }
             else
             {
                 var message = new
                 {
+                    EventTime = DateTime.Now,
                     EventType = "系统消息",
                     Content = $"{DateTime.Now},用户{userId}加入聊天"
                 };
-                return Clients.All.SendAsync("Broadcast", message);
+                return Clients.All.SendAsync("UserJoined", message);
             }
         }
 
@@ -68,19 +70,23 @@ namespace SignalR.Distributed.Hubs
             {
                 var message = new
                 {
+                    EventTime = DateTime.Now,
                     EventType = "系统消息",
+                    UserID = userId,
                     Content = $"{DateTime.Now},用户{userId}退出聊天室{roomId}"
                 };
-                return Clients.Group(roomId).SendAsync("Broadcast", message);
+                return Clients.Group(roomId).SendAsync("UserLeaved", message);
             }
             else
             {
                 var message = new
                 {
+                    EventTime = DateTime.Now,
                     EventType = "系统消息",
+                    UserID = userId,
                     Content = $"{DateTime.Now},用户{userId}退出聊天"
                 };
-                return Clients.All.SendAsync("Broadcast", message);
+                return Clients.All.SendAsync("UserLeaved", message);
             }
         }
 
@@ -90,7 +96,7 @@ namespace SignalR.Distributed.Hubs
         /// <param name="userId">用户Id</param>
         /// <param name="message">消息</param>
         /// <returns></returns>
-        public Task SendTo(string userId, string message)
+        public Task SendTo(string userId, string message, string sendBy)
         {
             if (!_userList.ContainsKey(userId))
             {
@@ -103,7 +109,12 @@ namespace SignalR.Distributed.Hubs
             }
 
             var connectionId = _userList[userId];
-            return Clients.Client(connectionId).SendAsync("ReceiveMessage", message);
+            return Clients.Client(connectionId).SendAsync("ReceiveMessage", new
+            {
+                EventTime = DateTime.Now,
+                EventSender = sendBy,
+                Content = message
+            });
         }
 
         /// <summary>
@@ -111,9 +122,14 @@ namespace SignalR.Distributed.Hubs
         /// </summary>
         /// <param name="message">消息</param>
         /// <returns></returns>
-        public Task SendAll(string message)
+        public Task SendAll(string message, string sendBy)
         {
-            return Clients.All.SendAsync("ReceiveMessage", message);
+            return Clients.All.SendAsync("ReceiveMessage", new
+            {
+                EventTime = DateTime.Now,
+                EventSender = sendBy,
+                Content = message
+            });
         }
     }
 }
