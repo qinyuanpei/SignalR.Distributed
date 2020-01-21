@@ -11,9 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SignalR.Distributed.Hubs;
-using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Serialization;
 using System.Text.Json;
+using CSRedis;
 
 namespace SignalR.Distributed
 {
@@ -33,6 +33,9 @@ namespace SignalR.Distributed
                 .AddNewtonsoftJson(options =>options.SerializerSettings.ContractResolver = new DefaultContractResolver());
             services.AddSignalR()
                 .AddJsonProtocol(options => options.PayloadSerializerOptions.PropertyNamingPolicy = null);
+            
+            var client = new CSRedis.CSRedisClient(Configuration["Redis:Url"]);
+            services.AddSingleton(typeof(CSRedisClient),client);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

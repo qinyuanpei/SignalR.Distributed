@@ -6,10 +6,23 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "CSRedisCore/3.3.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "SafeObjectPool": "2.2.1",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CSRedisCore.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.JsonPatch/3.1.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
@@ -21,7 +34,7 @@
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.1": {
         "dependencies": {
           "Microsoft.AspNetCore.JsonPatch": "3.1.1",
-          "Newtonsoft.Json": "12.0.2",
+          "Newtonsoft.Json": "12.0.3",
           "Newtonsoft.Json.Bson": "1.0.2"
         },
         "runtime": {
@@ -32,17 +45,17 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {},
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.2.23222"
+            "fileVersion": "12.0.3.23909"
           }
         }
       },
       "Newtonsoft.Json.Bson/1.0.2": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
@@ -51,51 +64,81 @@
           }
         }
       },
-      "SignalR/0.6.1": {}
+      "SafeObjectPool/2.2.1": {
+        "runtime": {
+          "lib/netstandard2.0/SafeObjectPool.dll": {
+            "assemblyVersion": "2.2.1.0",
+            "fileVersion": "2.2.1.0"
+          }
+        }
+      },
+      "SignalR/0.6.1": {},
+      "System.ValueTuple/4.5.0": {}
     }
   },
   "libraries": {
+    "CSRedisCore/3.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dP2UX6OxNF3tyTfYft9a5kIOIxorKx1pPWM5zHrdJymFYvjXlsA0tHHy1karEQ5tRud5gcD81LNxmzPUXdH39w==",
+      "path": "csrediscore/3.3.0",
+      "hashPath": "csrediscore.3.3.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.JsonPatch/3.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Y2hwnbYzA8nmRH3+eTXtG+HP7rkMSLcqcLh5vfoN/J3zcmYb7vMtRauSDT9GO85JGwk+blNiCDXEou8Dj2TR4g==",
+      "sha512": "sha512-FabohXawuw/B5jYnZ1jG/FbTN4hPXDE0tQ7CtLXztFk7Mz3TpqeNAySb0lIthPD0ZEPEIo8YdejhzJ4i/Hrcgw==",
       "path": "microsoft.aspnetcore.jsonpatch/3.1.1",
       "hashPath": "microsoft.aspnetcore.jsonpatch.3.1.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-t8vDVyivm/rnWvzvmVKGJUf7w8Mz1C4T3qnPAm0WyEU6LRt4WdLu4k1g8jVQ4qZTR7NDzv2DR0F2VSjZvkQdtQ==",
+      "sha512": "sha512-Hk6cNLQHNx2gtdlfIByoyAwa/x077vAgg8G7cSIyDq1M0gnG3kRa8qglV2p1Bzj3IrkuFJaXHxxzWSx/l7FMoA==",
       "path": "microsoft.aspnetcore.mvc.newtonsoftjson/3.1.1",
       "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.3.1.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "sha512": "sha512-LJaYhRX5VxTUuD9WUPGD3GpWTgs89SVfoOPvSEdt66tL3lQvny9sR/ZiC3px1qUV5EFebS44i2CBeiliHVaQ3w==",
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.2": {
+    "Newtonsoft.Json/12.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
-      "path": "newtonsoft.json/12.0.2",
-      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+      "sha512": "sha512-aTRmXwR5xYu+mWxE8r8W1DWnL02SeV8LwdQMsLwTWP8OZgrCCyTqvOAe5hRb1VNQYXjln7qr0PKpSyO/pcc19Q==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "Newtonsoft.Json.Bson/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
+      "sha512": "sha512-M52Tfhn8KzsfmTKHl9/KjVHvA6zWxuYa46HZ3ldqlT4U3N/pEeHvwtyzYx+3/jVnLb4t62hB2zWNVwDGl0VHfg==",
       "path": "newtonsoft.json.bson/1.0.2",
       "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
+    },
+    "SafeObjectPool/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zTsKxp76QLs+VUzld5tJSlyY/CGe6yZy9R+HHlSqN8a1q3l4X3iqEN3H2V+qMTCD7MqKvnabYsoZ85BUOyinLg==",
+      "path": "safeobjectpool/2.2.1",
+      "hashPath": "safeobjectpool.2.2.1.nupkg.sha512"
     },
     "SignalR/0.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-o1EWvln1cz8nfEMbpjMgMu+8eT9ggDncC4JhhVoBM89Z/PQgulTv4bChofiv6WIvN1qSLu74rUH42KgvwDwshw==",
+      "sha512": "sha512-Ed+5pn+vQOwwF3BIwEKrwmOuWijQMeMp9/kYpglmpO9wdWfJnmStBi1QkU12fpK+4kDQ4N6+nDpNucIJ7GPHUw==",
       "path": "signalr/0.6.1",
       "hashPath": "signalr.0.6.1.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+gDrtQRdEsUSdPZEEcVRmBvs6xJmqGBqRzEGMQm5XqHxWTkZe/PSuomdth5ZPcOb/Oh2kIu6NChoI1JQk649jg==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     }
   }
 }

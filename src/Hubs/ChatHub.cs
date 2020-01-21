@@ -4,13 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.Http;
+using CSRedis;
+using System.Security.Claims;
 
 namespace SignalR.Distributed.Hubs
 {
     public class ChatHub : Hub
     {
         /// <summary>
-        /// Http上下文
+        /// HttpContext
         /// </summary>
         private HttpContext _httpContext => this.Context.GetHttpContext();
 
@@ -20,15 +22,25 @@ namespace SignalR.Distributed.Hubs
         private Dictionary<string, string> _userList = new Dictionary<string, string>();
 
         /// <summary>
+        /// IRedisClient
+        /// </summary>
+        private readonly IRedisClient _redisClient;
+
+        public ChatHub(IRedisClient redisClient)
+        {
+            _redisClient = redisClient;
+        }
+
+        /// <summary>
         /// 用户连接
         /// </summary>
         /// <returns></returns>
         public override Task OnConnectedAsync()
         {
-            var userId = _httpContext.Request.Query["UserId"];
+            var userId = _httpContext.Request.Query["UserId"][0];
             if (string.IsNullOrEmpty(userId))
                 userId = Context.ConnectionId;
-            var roomId = _httpContext.Request.Query["RoomId"];
+            var roomId = _httpContext.Request.Query["RoomId"][0];
             _userList.Add(userId, Context.ConnectionId);
             Groups.AddToGroupAsync(Context.ConnectionId, roomId);
             if (!string.IsNullOrEmpty(roomId))
@@ -62,10 +74,10 @@ namespace SignalR.Distributed.Hubs
         /// <returns></returns>
         public override Task OnDisconnectedAsync(Exception exception)
         {
-            var userId = _httpContext.Request.Query["UserId"];
+            var userId = _httpContext.Request.Query["UserId"][0];
             if (string.IsNullOrEmpty(userId))
                 userId = Context.ConnectionId;
-            var roomId = _httpContext.Request.Query["RoomId"];
+            var roomId = _httpContext.Request.Query["RoomId"][0];
             _userList.Remove(userId);
             Groups.RemoveFromGroupAsync(Context.ConnectionId, roomId);
             if (!string.IsNullOrEmpty(roomId))
@@ -100,18 +112,7 @@ namespace SignalR.Distributed.Hubs
         /// <returns></returns>
         public Task SendTo(string userId, string message, string sendBy)
         {
-            if (!_userList.ContainsKey(userId))
-            {
-                ;
-                return Clients.All.SendAsync("Broadcast", new
-                {
-                    EventType = "系统消息",
-                    Content = $"指定的用户{userId}不存在"
-                });
-            }
-
-            var connectionId = _userList[userId];
-            return Clients.Client(connectionId).SendAsync("ReceiveMessage", new
+            return Clients.User(userId).SendAsync("ReceiveMessage", new
             {
                 EventTime = DateTime.Now,
                 EventSender = sendBy,
