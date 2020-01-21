@@ -9,7 +9,7 @@
   },
   "libraries": {
     "SignalR/0.6.1": {
-      "sha512": "Ed+5pn+vQOwwF3BIwEKrwmOuWijQMeMp9/kYpglmpO9wdWfJnmStBi1QkU12fpK+4kDQ4N6+nDpNucIJ7GPHUw==",
+      "sha512": "o1EWvln1cz8nfEMbpjMgMu+8eT9ggDncC4JhhVoBM89Z/PQgulTv4bChofiv6WIvN1qSLu74rUH42KgvwDwshw==",
       "type": "package",
       "path": "signalr/0.6.1",
       "files": [
@@ -32,9 +32,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "D:\\Projects\\SignalR.Distributed\\src\\SignalR.Distributed.csproj",
       "projectName": "SignalR.Distributed",
@@ -72,7 +69,7 @@
         "dependencies": {
           "SignalR": {
             "target": "Package",
-            "version": "0.6.1"
+            "version": "[0.6.1, )"
           }
         },
         "imports": [
@@ -84,7 +81,16 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

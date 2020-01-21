@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\SignalR.Distributed\\SignalR.Distributed.csproj": {}
+    "D:\\Projects\\SignalR.Distributed\\src\\SignalR.Distributed.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\SignalR.Distributed\\SignalR.Distributed.csproj": {
+    "D:\\Projects\\SignalR.Distributed\\src\\SignalR.Distributed.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\SignalR.Distributed\\SignalR.Distributed.csproj",
+        "projectUniqueName": "D:\\Projects\\SignalR.Distributed\\src\\SignalR.Distributed.csproj",
         "projectName": "SignalR.Distributed",
-        "projectPath": "D:\\Projects\\SignalR.Distributed\\SignalR.Distributed.csproj",
+        "projectPath": "D:\\Projects\\SignalR.Distributed\\src\\SignalR.Distributed.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\SignalR.Distributed\\obj\\",
+        "outputPath": "D:\\Projects\\SignalR.Distributed\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

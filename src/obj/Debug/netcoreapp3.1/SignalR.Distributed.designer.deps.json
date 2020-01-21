@@ -13,7 +13,7 @@
     "SignalR/0.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ed+5pn+vQOwwF3BIwEKrwmOuWijQMeMp9/kYpglmpO9wdWfJnmStBi1QkU12fpK+4kDQ4N6+nDpNucIJ7GPHUw==",
+      "sha512": "sha512-o1EWvln1cz8nfEMbpjMgMu+8eT9ggDncC4JhhVoBM89Z/PQgulTv4bChofiv6WIvN1qSLu74rUH42KgvwDwshw==",
       "path": "signalr/0.6.1",
       "hashPath": "signalr.0.6.1.nupkg.sha512"
     }
