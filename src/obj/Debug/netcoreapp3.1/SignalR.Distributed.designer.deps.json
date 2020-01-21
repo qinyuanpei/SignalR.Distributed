@@ -58,42 +58,42 @@
     "Microsoft.AspNetCore.JsonPatch/3.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FabohXawuw/B5jYnZ1jG/FbTN4hPXDE0tQ7CtLXztFk7Mz3TpqeNAySb0lIthPD0ZEPEIo8YdejhzJ4i/Hrcgw==",
+      "sha512": "sha512-Y2hwnbYzA8nmRH3+eTXtG+HP7rkMSLcqcLh5vfoN/J3zcmYb7vMtRauSDT9GO85JGwk+blNiCDXEou8Dj2TR4g==",
       "path": "microsoft.aspnetcore.jsonpatch/3.1.1",
       "hashPath": "microsoft.aspnetcore.jsonpatch.3.1.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Hk6cNLQHNx2gtdlfIByoyAwa/x077vAgg8G7cSIyDq1M0gnG3kRa8qglV2p1Bzj3IrkuFJaXHxxzWSx/l7FMoA==",
+      "sha512": "sha512-t8vDVyivm/rnWvzvmVKGJUf7w8Mz1C4T3qnPAm0WyEU6LRt4WdLu4k1g8jVQ4qZTR7NDzv2DR0F2VSjZvkQdtQ==",
       "path": "microsoft.aspnetcore.mvc.newtonsoftjson/3.1.1",
       "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.3.1.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LJaYhRX5VxTUuD9WUPGD3GpWTgs89SVfoOPvSEdt66tL3lQvny9sR/ZiC3px1qUV5EFebS44i2CBeiliHVaQ3w==",
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
+      "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
     "Newtonsoft.Json.Bson/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-M52Tfhn8KzsfmTKHl9/KjVHvA6zWxuYa46HZ3ldqlT4U3N/pEeHvwtyzYx+3/jVnLb4t62hB2zWNVwDGl0VHfg==",
+      "sha512": "sha512-QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
       "path": "newtonsoft.json.bson/1.0.2",
       "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
     },
     "SignalR/0.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ed+5pn+vQOwwF3BIwEKrwmOuWijQMeMp9/kYpglmpO9wdWfJnmStBi1QkU12fpK+4kDQ4N6+nDpNucIJ7GPHUw==",
+      "sha512": "sha512-o1EWvln1cz8nfEMbpjMgMu+8eT9ggDncC4JhhVoBM89Z/PQgulTv4bChofiv6WIvN1qSLu74rUH42KgvwDwshw==",
       "path": "signalr/0.6.1",
       "hashPath": "signalr.0.6.1.nupkg.sha512"
     }

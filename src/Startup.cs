@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using SignalR.Distributed.Hubs;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Serialization;
+using System.Text.Json;
 
 namespace SignalR.Distributed
 {
@@ -30,7 +31,8 @@ namespace SignalR.Distributed
         {
             services.AddControllers()
                 .AddNewtonsoftJson(options =>options.SerializerSettings.ContractResolver = new DefaultContractResolver());
-            services.AddSignalR();
+            services.AddSignalR()
+                .AddJsonProtocol(options => options.PayloadSerializerOptions.PropertyNamingPolicy = null);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
