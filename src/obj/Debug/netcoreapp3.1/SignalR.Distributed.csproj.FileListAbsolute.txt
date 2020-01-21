@@ -41,7 +41,5 @@ D:\Projects\SignalR.Distributed\src\obj\Debug\netcoreapp3.1\SignalR.Distributed.
 D:\Projects\SignalR.Distributed\src\obj\Debug\netcoreapp3.1\SignalR.Distributed.pdb
 D:\Projects\SignalR.Distributed\src\bin\Debug\netcoreapp3.1\CSRedisCore.dll
 D:\Projects\SignalR.Distributed\src\bin\Debug\netcoreapp3.1\SafeObjectPool.dll
-D:\Projects\SignalR.Distributed\src\obj\Debug\netcoreapp3.1\SignalR.Distributed.csprojResolveAssemblyReference.cache
-D:\Projects\SignalR.Distributed\src\obj\Debug\netcoreapp3.1\SignalR.Distributed.csproj.CoreCompileInputs.cache
 D:\Projects\SignalR.Distributed\src\obj\Debug\netcoreapp3.1\SignalR.Distributed.csprojAssemblyReference.cache
 D:\Projects\SignalR.Distributed\src\obj\Debug\netcoreapp3.1\SignalR.Distributed.csproj.CopyComplete
