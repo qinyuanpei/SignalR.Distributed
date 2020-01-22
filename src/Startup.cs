@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using SignalR.Distributed.Hubs;
 using Newtonsoft.Json.Serialization;
 using System.Text.Json;
+using Microsoft.AspNetCore.SignalR.Redis;
 using CSRedis;
 
 namespace SignalR.Distributed
@@ -32,7 +33,8 @@ namespace SignalR.Distributed
             services.AddControllers()
                 .AddNewtonsoftJson(options =>options.SerializerSettings.ContractResolver = new DefaultContractResolver());
             services.AddSignalR()
-                .AddJsonProtocol(options => options.PayloadSerializerOptions.PropertyNamingPolicy = null);
+                .AddRedis(Configuration["Redis:Url"],options => options.Configuration.ChannelPrefix = "ChatApp")
+                .AddJsonProtocol(options => options.PayloadSerializerOptions.PropertyNamingPolicy = null) ;
             
             var client = new CSRedis.CSRedisClient(Configuration["Redis:Url"]);
             services.AddSingleton(typeof(CSRedisClient),client);
